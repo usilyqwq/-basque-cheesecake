@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basque Burnt Cheesecake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- 标题区 -->
+  <div class="header">
+    <h1>Basque Burnt Cheesecake</h1>
+    <p><i>在这里写一句斜体简介</i></p>
+  </div>
+
+  <!-- 关于它：用 <b> 加粗关键词 -->
+  <div class="section">
+    <h2>About</h2>
+    <p>来自 <b>圣塞巴斯蒂安</b> 的……（自己写）</p>
+  </div>
+
+  <!-- 配料 + 步骤 -->
+  <div class="section">
+    <h2>Ingredients</h2>
+    <ul>
+      <li>奶油奶酪 450g</li>
+      <!-- 继续加 -->
+    </ul>
+    <h2>Steps</h2>
+    <ol>
+      <li>预热烤箱到 220°C</li>
+      <!-- 继续加 -->
+    </ol>
+  </div>
+
+  <!-- 表格 -->
+  <div class="section">
+    <h2>Flavors</h2>
+    <table>
+      <tr><th>版本</th><th>额外材料</th><th>难度</th><th>口感</th></tr>
+      <tr><td>原味</td><td>无</td><td>⭐⭐</td><td>奶香浓</td></tr>
+      <!-- 再加抹茶、巧克力两行 -->
+    </table>
+  </div>
+
+  <!-- 视频：把 YouTube 的嵌入代码整段换进来 -->
+  <div class="section">
+    <h2>Video Tutorial</h2>
+    <iframe width="560" height="315" src="这里换成YouTube嵌入链接" allowfullscreen></iframe>
+  </div>
+
+  <!-- 按钮换图 -->
+  <div class="section">
+    <h2>From Ingredients to Cake</h2>
+    <img id="cakePic" src="step1.jpg" width="400">
+    <p id="caption">第一步：准备原料</p>
+    <button onclick="nextPic()">下一步 👉</button>
+  </div>
+
+  <!-- 链接 -->
+  <div class="section">
+    <h2>Learn More</h2>
+    <a href="你参考的网址" target="_blank">链接文字</a>
+  </div>
+
+  <script>
+    let pics = ["step1.jpg", "step2.jpg", "step3.jpg"];
+    let captions = ["第一步：准备原料", "第二步：倒进模具", "完成！切开看看"];
+    let i = 0;
+
+    function nextPic() {
+      i = (i + 1) % pics.length;   // 到最后一张会自动回到第一张
+      document.getElementById("cakePic").src = pics[i];
+      document.getElementById("caption").innerHTML = captions[i];
+    }
+  </script>
+
+</body>
+</html>
