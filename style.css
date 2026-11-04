@@ -1,1 +1,15 @@
+body {
+  background-color: #FFF8E7;
+  font-family: "Georgia", serif;
+}
 
+h1 {
+  color: #8B4513;
+  font-size: 48px;
+}
+
+table, th, td {
+  border: 1px solid #8B4513;
+  border-collapse: collapse;
+  padding: 8px;
+}
