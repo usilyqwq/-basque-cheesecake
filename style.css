@@ -1,15 +1,150 @@
+/* 点链接时平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #FFF8E7;
   font-family: "Georgia", serif;
+  color: #3B2A1A;
+  margin: 0;
+}
+
+/* ===== 第一屏 ===== */
+.hero {
+  min-height: 100vh;          /* 占满整个屏幕 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 h1 {
   color: #8B4513;
-  font-size: 48px;
+  font-size: 56px;
+  margin: 0;
 }
 
-table, th, td {
-  border: 1px solid #8B4513;
+.tagline {
+  font-size: 20px;
+  margin: 12px 0 30px;
+}
+
+.hero-img {
+  width: 360px;
+  max-width: 85vw;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;          /* 照片不会被拉变形 */
+  border-radius: 50%;         /* 圆形 */
+  border: 6px solid #8B4513;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);     /* 鼠标放上去变大一点 */
+}
+
+/* 按钮 */
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background-color: #8B4513;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-color: #A0522D;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  text-align: center;
+}
+
+.section {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+h2 {
+  color: #8B4513;
+  margin-top: 0;
+}
+
+li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+a {
+  color: #8B4513;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ===== 表格 ===== */
+table {
+  width: 100%;
   border-collapse: collapse;
-  padding: 8px;
+}
+
+th, td {
+  border: 1px solid #E0C9A6;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #8B4513;
+  color: white;
+}
+
+tr:nth-child(even) td {
+  background-color: #FFF8E7;   /* 隔行变色 */
+}
+
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+/* ===== 换图部分 ===== */
+.step-img {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;        
+  object-fit: cover;    
+  border-radius: 12px;
+
+button {
+  padding: 10px 24px;
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: "Georgia", serif;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #A0522D;
 }
